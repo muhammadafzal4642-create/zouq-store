@@ -1,4 +1,4 @@
-import { Product, Coupon, Order } from '../types/store.ts';
+import type { Product, Coupon, Order } from '../types/store.ts';
 
 export const INITIAL_PRODUCTS: Product[] = [
   // --- SOCKS CATEGORY ---
