@@ -1,0 +1,6 @@
+{
+  "name": "ZOUQ Heritage - Premium Pakistani Store",
+  "description": "Premium Pakistani online retail brand offering luxury combed socks, handcrafted heritage jewellery, and authentic regional spices with nationwide COD, JazzCash, Easypaisa, and courier tracking.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
