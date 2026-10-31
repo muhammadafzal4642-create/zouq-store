@@ -591,6 +591,8 @@ async function configureServer() {
     app.use(vite.middlewares);
   } else {
     const distPath = path.join(__dirname, 'dist');
+    app.use(express.static(path.join(__dirname, 'public')));
+    app.use('/src', express.static(path.join(__dirname, 'src')));
     app.use(express.static(distPath));
     app.get('*', (req: Request, res: Response) => {
       res.sendFile(path.join(distPath, 'index.html'));
@@ -601,6 +603,8 @@ async function configureServer() {
 
 const isVercel = Boolean(process.env.VERCEL);
 if (isVercel || process.env.NODE_ENV === 'production') {
+  app.use(express.static(path.join(__dirname, 'public')));
+  app.use('/src', express.static(path.join(__dirname, 'src')));
   app.use(express.static(path.join(__dirname, 'dist')));
   app.get('*', (req: Request, res: Response) => {
     res.sendFile(path.join(__dirname, 'dist', 'index.html'));
